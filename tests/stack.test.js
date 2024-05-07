@@ -25,5 +25,6 @@ test('Pop stack and returns the top element', () => {
 })
 
 test('Peek returns undefined if stack is empty', () => {
+    stack.pop()
     expect(stack.peek()).toBeUndefined();
 })
