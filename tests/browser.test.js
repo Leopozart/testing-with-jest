@@ -23,6 +23,11 @@ test('The stack should be empty in the beginning', async () => {
 	expect(stack).toEqual("n/a");
 });
 
+test('h1 text bör lyda: Här kan vi leka med en stack', async () => {
+	let h1 = await driver.findElement(By.tagName('h1')).getText();
+	expect(h1).toEqual("Här kan vi leka med en stack");
+});
+
 describe('Clicking "Pusha till stacken"', () => {
 	it('should open a prompt box', async () => {
 		let push = await driver.findElement(By.id('push'));
